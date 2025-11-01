@@ -150,11 +150,11 @@ def gen_samples_dict(sounds_dir, convert_to_wav=False):
         # print('*'*20)
         if convert_to_wav:
             print('yo')
-            files_for_conversion = [f for f in files if f.ext.lower() in ['.m4a']]
+            files_for_conversion = [f for f in files if f.suffix.lower() in ['.m4a']]
             print(files_for_conversion)
             for f in files_for_conversion:
                 convert_file_to_wav(f)
-        files = [f for f in files if f.ext.lower() == '.wav']
+        files = [f for f in files if f.suffix.lower() == '.wav']
         print(files)
         for i, file in enumerate(files):
             # print(file.split('/')[-1])
